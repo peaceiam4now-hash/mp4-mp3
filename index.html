@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>MP4 to MP3 Converter</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Fast, free MP4 to MP3 converter. Runs in your browser. No upload." />
+  <link rel="stylesheet" href="./styles.css" />
+  <!-- Drop your Adsense / tracking scripts here later -->
+</head>
+<body>
+  <div class="app-shell">
+    <header class="app-header">
+      <h1>MP4 → MP3 Converter</h1>
+      <p>Instant audio extraction. In-browser. Your files never leave your device.</p>
+    </header>
+
+    <main class="app-main">
+      <label class="file-drop" id="drop-zone">
+        <input type="file" id="file-input" accept="video/mp4,video/x-m4v,video/*" hidden />
+        <div class="file-drop-inner">
+          <div class="icon">⬆️</div>
+          <div class="title">Drop MP4 here or click to browse</div>
+          <div class="hint">Max ~1–2GB depending on your device. Runs locally.</div>
+          <div class="filename" id="file-name"></div>
+        </div>
+      </label>
+
+      <button id="convert-btn" class="btn" disabled>Convert to MP3</button>
+
+      <div id="status" class="status">Load a file to get started.</div>
+
+      <div id="download-wrap" class="download-wrap hidden">
+        <a id="download-link" class="btn secondary" download="output.mp3">Download MP3</a>
+      </div>
+    </main>
+
+    <footer class="app-footer">
+      <span>Powered by ffmpeg.wasm · Host static, plug in ads, print money.</span>
+    </footer>
+  </div>
+
+  <!-- ffmpeg.wasm UMD bundle -->
+  <script src="https://unpkg.com/@ffmpeg/ffmpeg@0.12.10/dist/ffmpeg.min.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
