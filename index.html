@@ -2,26 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>MP4 to MP3 Converter</title>
+  <title>MP4 to MP3 Converter — Fast, Free, In-Browser</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Fast, free MP4 to MP3 converter. Runs in your browser. No upload." />
+  <meta name="description" content="Fast, free MP4 to MP3 converter. Runs entirely in your browser. No file uploads." />
   <link rel="stylesheet" href="./styles.css" />
-  <!-- Drop your Adsense / tracking scripts here later -->
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9934131238650717"
+    crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="app-shell">
     <header class="app-header">
       <h1>MP4 → MP3 Converter</h1>
-      <p>Instant audio extraction. In-browser. Your files never leave your device.</p>
+      <p>Instant audio extraction. 100% browser-based. Your files stay on your device.</p>
     </header>
+
+    <!-- Top Ad Block -->
+    <section class="ads-wrap">
+      <!-- Replace data-ad-slot with your real slot ID from AdSense -->
+      <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-9934131238650717"
+        data-ad-slot="1234567890"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </section>
 
     <main class="app-main">
       <label class="file-drop" id="drop-zone">
         <input type="file" id="file-input" accept="video/mp4,video/x-m4v,video/*" hidden />
         <div class="file-drop-inner">
           <div class="icon">⬆️</div>
-          <div class="title">Drop MP4 here or click to browse</div>
-          <div class="hint">Max ~1–2GB depending on your device. Runs locally.</div>
+          <div class="title">Drop your MP4 here or click to browse</div>
+          <div class="hint">Conversion runs locally in your browser. Ideal for creators, editors, and artists.</div>
           <div class="filename" id="file-name"></div>
         </div>
       </label>
@@ -33,10 +50,54 @@
       <div id="download-wrap" class="download-wrap hidden">
         <a id="download-link" class="btn secondary" download="output.mp3">Download MP3</a>
       </div>
+
+      <!-- Affiliate Recommendations -->
+      <section class="aff-block">
+        <h2>Level Up Your Audio</h2>
+        <p class="aff-note">
+          Recommended gear and resources. These are affiliate links — purchases may earn a commission at no extra cost to you.
+        </p>
+
+        <div class="aff-grid">
+          <!-- Mini Mic Pro -->
+          <a
+            href="https://www.amazon.com/dp/B0CMJTSVRW?tag=audio87-20"
+            target="_blank"
+            rel="nofollow noopener"
+            class="aff-card"
+          >
+            <div class="aff-title">Mini Mic Pro – Portable Professional Mic</div>
+            <div class="aff-label">Perfect for mobile recording & quick content.</div>
+          </a>
+
+          <!-- Second Product (e.g. interface/headset/etc.) -->
+          <a
+            href="https://www.amazon.com/dp/B0BQ2YK9VT?tag=audio87-20"
+            target="_blank"
+            rel="nofollow noopener"
+            class="aff-card"
+          >
+            <div class="aff-title">Creator Essentials – Plug & Play Audio Kit</div>
+            <div class="aff-label">Clean sound for podcasting, streaming, and rap vocals.</div>
+          </a>
+
+          <!-- How to Rap / Freestyle book -->
+          <a
+            href="https://www.amazon.com/dp/1962386899?tag=audio87-20"
+            target="_blank"
+            rel="nofollow noopener"
+            class="aff-card"
+          >
+            <div class="aff-title">HowExpert Guide to Freestyle Rap</div>
+            <div class="aff-label">Sharpen delivery, flow, and punchlines.</div>
+          </a>
+        </div>
+      </section>
     </main>
 
     <footer class="app-footer">
-      <span>Powered by ffmpeg.wasm · Host static, plug in ads, print money.</span>
+      <span>Zero-upload MP4 → MP3 converter.</span>
+      <span>Monetized intelligently. Built for scale.</span>
     </footer>
   </div>
 
