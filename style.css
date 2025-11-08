@@ -1,0 +1,177 @@
+:root {
+  --bg: #020817;
+  --panel: #050b1f;
+  --border: #141827;
+  --accent: #38bdf8;
+  --accent-soft: rgba(56, 189, 248, 0.14);
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --radius-xl: 18px;
+  --radius-md: 10px;
+  --shadow-soft: 0 18px 50px rgba(15,23,42,0.65);
+  --font: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font);
+  background: radial-gradient(circle at top, #0f172a 0, #020817 40%, #000 100%);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+}
+
+.app-shell {
+  width: 100%;
+  max-width: 720px;
+  background: radial-gradient(circle at top left, rgba(56,189,248,0.06), transparent) fixed,
+              var(--panel);
+  border-radius: 28px;
+  padding: 24px 22px 18px;
+  border: 1px solid rgba(148,163,253,0.12);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.app-header h1 {
+  margin: 0 0 4px;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.app-header p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.app-main {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 6px;
+}
+
+.file-drop {
+  border-radius: 22px;
+  padding: 18px 16px;
+  border: 1px dashed rgba(75,85,99,0.85);
+  background: radial-gradient(circle at top, rgba(56,189,248,0.06), transparent),
+              rgba(5,10,25,0.98);
+  cursor: pointer;
+  transition: all 0.18s ease-out;
+  display: block;
+}
+
+.file-drop-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.file-drop .icon {
+  font-size: 22px;
+  margin-bottom: 2px;
+}
+
+.file-drop .title {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.file-drop .hint {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.file-drop .filename {
+  font-size: 11px;
+  color: var(--accent);
+  margin-top: 4px;
+  word-break: break-all;
+}
+
+.file-drop:hover,
+.file-drop.dragover {
+  border-color: var(--accent);
+  background-color: rgba(9,9,18,1);
+  box-shadow: 0 10px 30px rgba(15,23,42,0.9);
+  transform: translateY(-1px);
+}
+
+.btn {
+  padding: 11px 16px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(to right, var(--accent), #6366f1);
+  color: #020817;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  box-shadow: 0 10px 26px rgba(37,99,235,0.4);
+  transition: all 0.16s ease-out;
+}
+
+.btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 34px rgba(15,23,42,0.9);
+}
+
+.btn:disabled {
+  opacity: 0.32;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.btn.secondary {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid rgba(148,163,253,0.34);
+  box-shadow: none;
+}
+
+.btn.secondary:hover {
+  background: var(--accent-soft);
+  color: #e5e7eb;
+}
+
+.status {
+  font-size: 11px;
+  color: var(--muted);
+  min-height: 16px;
+}
+
+.download-wrap {
+  margin-top: 2px;
+}
+
+.hidden {
+  display: none;
+}
+
+.app-footer {
+  margin-top: 2px;
+  padding-top: 6px;
+  border-top: 1px solid rgba(31,41,55,0.9);
+  font-size: 9px;
+  color: #6b7280;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+}
